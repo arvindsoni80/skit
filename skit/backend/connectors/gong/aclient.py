@@ -256,18 +256,7 @@ class AsyncGongClient:
         # clamp to something sane (e.g., max 30s)
         return min(base, 30.0)
 
-TARGET_INTERNAL_EMAILS = ["john@coderabbit.ai",
-"fred@coderabbit.ai"
-"ncammarano@coderabbit.ai", 
-"mbenoit@coderabbit.ai",
-"michael@coderabbit.ai",
-"chawkins@coderabbit.ai",
-"taymor@coderabbit.ai",
-"joel@coderabbit.ai",
-"lucas@coderabbit.ai",
-"gus@coderabbit.ai",
-"charles@coderabbit.ai"
-"miles@coderabbit.ai"
+TARGET_INTERNAL_EMAILS = [
 ]
 import asyncio
 from datetime import datetime, timedelta, timezone
