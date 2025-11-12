@@ -1,8 +1,9 @@
 
 import asyncio
 from datetime import datetime, timedelta, timezone
-from typing import Dict, List, Any, Tuple, Iterable, Optional
+from typing import Dict, List, Any, Tuple, Iterable
 from aclient import AsyncGongClient
+import pandas as pd
 # ---- configure these ----
 TARGET_INTERNAL_EMAILS = [
 ]
@@ -100,10 +101,7 @@ def extract_external_parties_from_calls(
 
 
 # ---------- excel write --------
-import pandas as pd
-from datetime import datetime
-from typing import List, Dict, Any
-import re
+
 
 def _auto_fit_columns(writer: pd.ExcelWriter, sheet_name: str, df: pd.DataFrame, max_width: int = 60) -> None:
     """Best-effort column width autosize (OpenPyXL engine)."""
